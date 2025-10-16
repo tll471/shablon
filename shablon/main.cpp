@@ -14,14 +14,9 @@ void Fill(T arr[][5], T size)
 	}
 }
 
-
-int main()
+template <class B>
+void Print(B arr[][5], B size)
 {
-	const int size = 5;
-	int arr[size][size];
-	Fill(arr, size);
-	
-
 	for (size_t i = 0; i < size; i++)
 	{
 		for (int j = 0; j < size; j++)
@@ -30,6 +25,15 @@ int main()
 		}
 		cout << endl;
 	}
+}
+
+int main()
+{
+	const int size = 5;
+	int arr[size][size];
+	Fill(arr, size);
+	Print(arr, size);
+
 	cout << endl;
 	cout << "По диагонали" << endl;
 	
